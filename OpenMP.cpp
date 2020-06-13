@@ -1,4 +1,4 @@
-﻿#include <omp.h>
+#include <omp.h>
 #include <ctime>
 #include <iostream>
 
@@ -23,7 +23,7 @@ void float_parallel_matmul();
 void double_matmul();
 void double_parallel_matmul();
 
-int i, j, k,counter;
+int i, j, k;
 
 int main()
 {
@@ -62,13 +62,6 @@ void float_matmul() {
     }
     finish = clock();
     cout << "Float Seri Kosma Suresi = " << float(finish - start) / CLOCKS_PER_SEC << " sn" << endl;
-
-    /*for (i= 0; i< N; i++){
-         for (j= 0; j< N; j++){
-             printf("%.1f\t",C[i][j]);
-         }
-         printf("\n");
-     }*/
 }
 
 void float_parallel_matmul() {
@@ -103,13 +96,6 @@ void double_matmul() {
     }
     finish = clock();
     cout << "Double Seri Kosma Suresi = " << float(finish - start) / CLOCKS_PER_SEC << " sn" << endl;
-
-    /*for (i= 0; i< N; i++){
-         for (j= 0; j< N; j++){
-             printf("%.1f\t",F[i][j]);
-         }
-         printf("\n");
-     }*/
 }
 
 void double_parallel_matmul() {
