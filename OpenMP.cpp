@@ -1,5 +1,5 @@
 #include <omp.h> //OpenMP kütüphanesi
-#include <ctime> //Süreleri oşup hesaplatmak için gerekli kütüphane
+#include <ctime> //Süreleri koşup hesaplatmak için gerekli kütüphane
 #include <iostream>
 
 using namespace std;
@@ -30,7 +30,7 @@ int i, j, k;
 int main()
 {
     omp_set_num_threads(thread_num);  //Thread Sayısını Setleme.
-    cout << "\nThread Sayisi = " << omp_get_max_threads() << "\n" << endl; //Setlenen Thread Sayısının Ekrena YAzılması
+    cout << "\nThread Sayisi = " << omp_get_max_threads() << "\n" << endl; //Setlenen Thread Sayısının Ekrena Yazılması
     cout << N << "x" << N << " icin;\n----------------" << endl;
     float_matmul(); //Float Seri Matris Çarpım Fonk. Çağırımı
     float_parallel_matmul(); //Float Paralel Matris Çarpım Fonk. Çağırımı
@@ -68,7 +68,7 @@ void float_matmul() { //Float Seri Matris Çarpım Fonk.
     }
     finish = clock(); //Koşma Süresini Bitiriyoruz.
     cout << "Float Seri Kosma Suresi = " << float(finish - start) / CLOCKS_PER_SEC << " sn" << endl;
-    //Bitiş Süresinden Başlangıç Süresini çıkartıp float seri koşma süresini ekrana yazdırıyoruz.
+    //Bitiş süresinden başlangıç süresini çıkartıp float seri koşma süresini ekrana yazdırıyoruz.
 }
 
 void float_parallel_matmul() { //Float Paralel Matris Çarpım Fonk.
