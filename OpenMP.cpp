@@ -114,7 +114,7 @@ void double_matmul() { //Double Seri Matris Çarpım Fonk.
 
 void double_parallel_matmul() { //Double Paralel Matris Çarpım Fonk.
     
-    //Float Seriyle aynı.Tek fark bu sefer yıkarıda tanımladığımız double matrisleri kullanıyoruz.
+    //Float Paralel aynı.Tek fark bu sefer yıkarıda tanımladığımız double matrisleri kullanıyoruz.
     matrix();
     clock_t pstart = clock(), pend;
     #pragma omp parallel for private(i,j,k) shared(D,E,F) 
