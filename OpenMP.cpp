@@ -32,7 +32,7 @@ template <class M> int Matrix<M>::k;
 
 template <class M> M Matrix<M>::A[N][N];
 template <class M> M Matrix<M>::B[N][N];
-template <class M>M Matrix<M>::C[N][N];
+template <class M> M Matrix<M>::C[N][N];
 
 template <class M>
 Matrix<M>::Matrix() {
