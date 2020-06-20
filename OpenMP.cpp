@@ -12,7 +12,7 @@ class Matrix
 {
 public:
 
-	Matrix();
+	 Matrix();
     void Matmul();
     void Parallel_Matmul();
 
@@ -62,9 +62,9 @@ void Matrix<M>::Matmul(){
     end = clock();
 
     if (sizeof(M) == sizeof(float))
-    cout << "Float Seri Kosma Suresi = " << float(end - start) / CLOCKS_PER_SEC << " sn" << endl;
+    	cout << "Float Seri Kosma Suresi = " << float(end - start) / CLOCKS_PER_SEC << " sn" << endl;
     else if (sizeof(M) == sizeof(double))
-    cout << "Double Seri Kosma Suresi = " << float(end - start) / CLOCKS_PER_SEC << " sn" << endl;
+    	cout << "Double Seri Kosma Suresi = " << float(end - start) / CLOCKS_PER_SEC << " sn" << endl;
 }
 
 template <class M>
