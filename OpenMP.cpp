@@ -41,8 +41,8 @@ Matrix<M>::Matrix() {
     for (i = 0; i < N; i++) {
         for (j = 0; j < N; j++)
         {
-            A[i][j] = 1.0;
-            B[i][j] = 1.0;
+            A[i][j] = deger;
+            B[i][j] = deger;
             C[i][j] = 0;
         }
     }
