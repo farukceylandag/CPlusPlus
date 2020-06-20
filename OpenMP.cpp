@@ -8,8 +8,8 @@ using namespace std;
 #define thread_num omp_get_max_threads() //Thread Sayısı
 
 template <class M>
-class Matrix
-{
+class Matrix {
+	
 public:
 
 	 Matrix();
@@ -23,7 +23,6 @@ private:
     static M B[N][N];
     static M C[N][N];
     M deger = 1.0;
-
 
 };
 
@@ -49,7 +48,7 @@ Matrix<M>::Matrix() {
 }
 
 template <class M>
-void Matrix<M>::Matmul(){
+void Matrix<M>::Matmul() {
 
     clock_t start = clock(), end;
     for (i = 0; i < N; i++) {
